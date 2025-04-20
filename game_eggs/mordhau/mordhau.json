@@ -9,7 +9,7 @@
     "author": "drdacek@gmail.com",
     "description": "Mordhau is a multiplayer medieval hack 'n slash video game, developed by Slovenian independent studio Triternion, with a prominent aspect of skill-based competitive play and customization.",
     "docker_images": {
-        "ghcr.io/parkervcp/steamcmd:debian": "ghcr.io/parkervcp/steamcmd:debian"
+        "ghcr.io/parkervcp/yolks:debian": "ghcr.io/parkervcp/yolks:debian"
     },
     "file_denylist": [],
     "startup": "./Mordhau/Binaries/Linux/MordhauServer-Linux-Shipping /Game/Mordhau/Maps/{{DEFAULT_MAP}} -MaxSlots={{MAX_PLAYERS}} -USEALLAVAILABLECORES -Port={{SERVER_PORT}} -queryport={{QUERY_PORT}} -beaconport={{BEACON_PORT}}",
@@ -18,6 +18,13 @@
         "logs": "{}",
         "startup": "{\r\n    \"done\": \"Session GameSession successfully created\"\r\n}",
         "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# Mordhau Installation Script\r\n#\r\n# \r\n\r\necho \"-----------------------------------------\"\r\necho \"Installation completed...\"\r\necho \"-----------------------------------------\"",
+            "container": "ghcr.io\/parkervcp\/installers:debian",
+            "entrypoint": "bash"
+        }
     },
     "variables": [
         {
