@@ -11,8 +11,7 @@
   "docker_images": {
     "ghcr.io/parkervcp/generic:debian": "ghcr.io/parkervcp/generic:debian"
   },
-  "startup": "./Mordhau/Binaries/Linux/MordhauServer-Linux-Shipping /Game/Mordhau/Maps/{{DEFAULT_MAP}} -MaxSlots={{MAX_PLAYERS}} -Port={{SERVER_PORT}} -QueryPort={{QUERY_PORT}} -BeaconPort={{BEACON_PORT}} -ServerPassword={{GAME_PASSWORD}} -AdminPassword={{ADMIN_PASSWORD}}
-",
+  "startup": ".\/Mordhau\/Binaries\/Linux\/MordhauServer-Linux-Shipping \/Game\/Mordhau\/Maps\/{{DEFAULT_MAP}} -MaxSlots={{MAX_PLAYERS}} -USEALLAVAILABLECORES -Port={{SERVER_PORT}} -queryport={{QUERY_PORT}} -beaconport={{BEACON_PORT}}",
   "config": {
     "files": {},
     "startup": {
