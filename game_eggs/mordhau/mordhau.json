@@ -4,14 +4,15 @@
     "version": "PTDL_v2",
     "update_url": null
   },
-  "name": "Mordhau (Custom Version)",
+  "name": "Mordhau ETI",
   "author": "drdacek@gmail.com",
   "description": "Mordhau dedicated server (custom version) without SteamCMD. Upload your own files.",
   "features": [],
   "docker_images": {
     "ghcr.io/parkervcp/generic:debian": "ghcr.io/parkervcp/generic:debian"
   },
-  "startup": "<přikaz na spuštění>",
+  "startup": "./Mordhau/Binaries/Linux/MordhauServer-Linux-Shipping /Game/Mordhau/Maps/{{DEFAULT_MAP}} -MaxSlots={{MAX_PLAYERS}} -Port={{SERVER_PORT}} -QueryPort={{QUERY_PORT}} -BeaconPort={{BEACON_PORT}} -ServerPassword={{GAME_PASSWORD}} -AdminPassword={{ADMIN_PASSWORD}}
+",
   "config": {
     "files": {},
     "startup": {
